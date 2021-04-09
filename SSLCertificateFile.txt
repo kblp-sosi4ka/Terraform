@@ -1,0 +1,14 @@
+#/etc/httpd/conf/httpd.conf
+
+#yum -y install mod_ssl
+
+<VirtualHost *:443>
+ SSLEngine on
+ SSLCertificateFile /root/cert/zeroxzed.ru.crt
+ SSLCertificateKeyFile /root/cert.key
+ <Directory /var/www/html>
+ AllowOverride All
+ </Directory>
+ DocumentRoot /var/www/html
+ ServerName ec2-3-127-247-4.eu-central-1.compute.amazonaws.com
+ </VirtualHost>
