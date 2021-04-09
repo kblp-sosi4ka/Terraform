@@ -4,7 +4,7 @@
 
 <VirtualHost *:443>
  SSLEngine on
- SSLCertificateFile /root/cert/zeroxzed.ru.crt
+ SSLCertificateFile /root/cert.crt
  SSLCertificateKeyFile /root/cert.key
  <Directory /var/www/html>
  AllowOverride All
@@ -12,3 +12,6 @@
  DocumentRoot /var/www/html
  ServerName ec2-3-127-247-4.eu-central-1.compute.amazonaws.com
  </VirtualHost>
+
+# systemctl restart httpd
+# ss -ntulp | 
